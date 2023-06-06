@@ -8,15 +8,15 @@ import modules.safe
 sys.path.insert(0, script_path)
 
 # search for directory of stable diffusion in following places
-sd_path = None
-possible_sd_paths = [os.path.join(script_path, '/mydrive/sd/stablediffusion'), '.', os.path.dirname(script_path)]
-for possible_sd_path in possible_sd_paths:
-    print(os.path.join(possible_sd_path, 'ldm/models/diffusion/ddpm.py'))
-    if os.path.exists(os.path.join(possible_sd_path, 'ldm/models/diffusion/ddpm.py')):
-        sd_path = os.path.abspath(possible_sd_path)
-        break
+sd_path = /home/studio-lab-user/mydrive/sd/stable-diffusion
+# possible_sd_paths = [os.path.join(script_path, '/mydrive/sd/stablediffusion'), '.', os.path.dirname(script_path)]
+# for possible_sd_path in possible_sd_paths:
+#     print(os.path.join(possible_sd_path, 'ldm/models/diffusion/ddpm.py'))
+#     if os.path.exists(os.path.join(possible_sd_path, 'ldm/models/diffusion/ddpm.py')):
+#         sd_path = os.path.abspath(possible_sd_path)
+#         break
 
-assert sd_path is not None, "Couldn't find Stable Diffusion in any of: " + str(possible_sd_paths)
+# assert sd_path is not None, "Couldn't find Stable Diffusion in any of: " + str(possible_sd_paths)
 
 path_dirs = [
     (sd_path, 'ldm', 'Stable Diffusion', []),
